@@ -1,0 +1,24 @@
+{
+  "name": "burger",
+  "version": "1.0.0",
+  "description": "Just eatin' burgers.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/janiello/Burger.git"
+  },
+  "author": "janiello",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/janiello/Burger/issues"
+  },
+  "homepage": "https://github.com/janiello/Burger#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "express-handlebars": "^3.1.0",
+    "mysql": "^2.17.1"
+  }
+}
