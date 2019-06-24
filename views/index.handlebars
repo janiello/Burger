@@ -2,6 +2,18 @@
 
 <h2>Choose from our award winning menu!</h2>
 
+<ul>
+  {{#each burgers}}
+    <li>
+      {{burger_name}}
+
+      <button class="devour" data-id="{{id}}" data-devoured="{{devoured}}">
+          {{#if devoured.data-devoured}}Devour!{{/if}}
+      </button>
+    </li>
+  {{/each}}
+</ul>
+
 <h2>Create your own burger:</h2>
 <form class="create-form">
 
@@ -12,3 +24,13 @@
 
   <button type="submit">Add to Menu</button>
 </form>
+
+<h2>Burgers Eaten</h2>
+
+<ul>
+  {{#each burgers.devoured}}
+    <li>
+      {{burger_name}}
+    </li>
+  {{/each}}
+</ul>
