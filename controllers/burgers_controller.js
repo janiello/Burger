@@ -15,17 +15,17 @@ router.get("/", function(request, response) {
 });
 
 router.post("/api/burgers", function(request, response) {
-    burger.insertOne(["burger_name", "devoured"], [req.body.burger_name, req.body.devoured], function(result) {
+    burger.insertOne(["burger_name", "devoured"], [request.body.burger_name, request.body.devoured], function(result) {
         response.json({id: result.insertId});
     });
 });
 
 router.put("/api/burgers/:id", function(request, response) {
-    var condition = "id = " + req.params.id;
+    var condition = "id = " + request.params.id;
     console.log("condition", condition);
     burger.updateOne(
         {
-            devoured: req.body.devoured
+            devoured: request.body.devoured
         },
         condition,
         function(result) {
